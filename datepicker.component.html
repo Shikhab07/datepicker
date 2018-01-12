@@ -1,0 +1,8 @@
+<md-form-field>
+    <div class="custom-textbox date_pic">
+        <input mdInput [(ngModel)]="data" [max]="disableFuture==true?presentDay:null" [mdDatepicker]="picker" maxlength="50" 
+        placeholder="dd.mm.yy" (blur)="dateFormatter($event);" customDateValidator="true">
+        <md-datepicker-toggle mdSuffix [for]="picker"></md-datepicker-toggle>
+        <md-datepicker #picker  (selectedChanged)="onItemSelection($event)"></md-datepicker>
+    </div>
+</md-form-field>
